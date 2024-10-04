@@ -13,8 +13,8 @@ func main() {
 	// fmt.Printf("%d * %f = %d\n", i, f, i*int(f))
 	// fmt.Println(reflect.TypeOf(i), reflect.TypeOf(f))
 
-	c1 := 'z'
-	c2 := '김'
+	c1 := 'z' //90
+	c2 := '김' //44608
 
 	fmt.Println(c1, c2)
 	fmt.Println(reflect.TypeOf(c1), reflect.TypeOf(c2))
