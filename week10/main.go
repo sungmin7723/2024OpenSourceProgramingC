@@ -24,14 +24,20 @@ func main() {
 	}
 	// count := 0
 	var isPrime bool = true // 가독성 up, 메모리 down
-	j := 2
-	for j < n {
-		if n%j == 0 {
-			// count++
-			isPrime = false // 더하기 연산 제거
+	// bug fix 1 == prime number
+	if n <= 1 { // A prime numbers is a natural number ...
+		isPrime = false
+	} else {
+		j := 2
+		for j < n {
+			if n%j == 0 {
+				// count++
+				isPrime = false // 더하기 연산 제거
+			}
+			j++
 		}
-		j++
 	}
+
 	// if count == 0 {
 	if isPrime { // == 비교 연산자 제거
 		fmt.Printf("%d is prime number", n)
