@@ -22,20 +22,20 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	count := 0
-
+	// count := 0
+	var isPrime bool = true // 가독성 up, 메모리 down
 	j := 2
 	for j < n {
 		if n%j == 0 {
-			count++
+			// count++
+			isPrime = false // 더하기 연산 제거
 		}
 		j++
 	}
-	if count == 0 {
+	// if count == 0 {
+	if isPrime { // == 비교 연산자 제거
 		fmt.Printf("%d is prime number", n)
 	} else {
 		fmt.Printf("%d is Not prime number", n)
-
 	}
 }
