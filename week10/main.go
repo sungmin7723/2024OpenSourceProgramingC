@@ -25,7 +25,7 @@ func main() {
 	// count := 0
 	var isPrime bool = true // 가독성 up, 메모리 down
 	// bug fix 1 == prime number
-	if n <= 1 { // A prime numbers is a natural number ...
+	if n <= 1 { // A prime numbers is a natural number greater than 1 that has only 1 and itself as divisors
 		isPrime = false
 	} else {
 		j := 2
@@ -33,7 +33,9 @@ func main() {
 			if n%j == 0 {
 				// count++
 				isPrime = false // 더하기 연산 제거
+				break           // performance up
 			}
+			fmt.Printf("%d ", j) // check j loop
 			j++
 		}
 	}
