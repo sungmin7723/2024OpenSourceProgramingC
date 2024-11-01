@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 )
 
 func main() {
@@ -11,9 +12,9 @@ func main() {
 	// fmt.Print(result)
 
 	i := 1
-	fmt.Printf("%T\n", i)
-	// for i <= 10 {
-	// 	fmt.Printf("%d\n", rand.Intn(1000)+1)
-	// 	i++
-	// }
+	// fmt.Printf("%T\n", i)
+	for i <= 10 {
+		fmt.Printf("%d\n", rand.Intn(1000)+1)
+		i++
+	}
 }
